@@ -130,6 +130,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
+    <Compile Include="Controllers\KitapController.cs" />
+    <Compile Include="Controllers\YazarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -240,9 +242,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Layout.cshtml" />
     <Content Include="Views\Kategori\Index.cshtml" />
+    <Content Include="Views\Kategori\KategoriEkle.cshtml" />
+    <Content Include="Views\Kategori\KategoriGetir.cshtml" />
+    <Content Include="Views\Yazar\Index.cshtml" />
+    <Content Include="Views\Yazar\YazarEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Kitap\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
