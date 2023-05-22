@@ -30,8 +30,20 @@ namespace MvcKutuphane.Controllers
         }
         public ActionResult KategoriSil(int id)
         {
-            var deger = db.TBLKATEGORI.Find(id);
-            db.TBLKATEGORI.Remove(deger); 
+            var kategori = db.TBLKATEGORI.Find(id);
+            db.TBLKATEGORI.Remove(kategori); 
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult KategoriGetir(int id)
+        {
+            var ktg = db.TBLKATEGORI.Find(id);
+            return View("KategoriGetir", ktg); //KategoriGetir sayfasını ktg değeri ile döndür o id değerine göre.
+        }
+        public ActionResult KategoriGuncelle(TBLKATEGORI p)
+        {
+            var ktgr = db.TBLKATEGORI.Find(p.ID);
+            ktgr.AD = p.AD;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
