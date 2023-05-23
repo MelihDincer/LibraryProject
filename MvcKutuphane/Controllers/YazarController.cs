@@ -16,16 +16,37 @@ namespace MvcKutuphane.Controllers
             return View(degerler);
         }
         [HttpGet]
-        public ActionResult YazarEkle() 
-        { 
-            return View(); 
+        public ActionResult YazarEkle()
+        {
+            return View();
         }
         [HttpPost]
-        public ActionResult YazarEkle(TBLYAZAR p) 
-        { 
+        public ActionResult YazarEkle(TBLYAZAR p)
+        {
             db.TBLYAZAR.Add(p);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
+        }
+        public ActionResult YazarSil(int id)
+        {
+           var yazar = db.TBLYAZAR.Find(id);
+            db.TBLYAZAR.Remove(yazar);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult YazarGetir(int id)
+        {
+            var yazar = db.TBLYAZAR.Find(id);
+            return View("YazarGetir", yazar);
+        }
+        public ActionResult YazarGuncelle(TBLYAZAR p)
+        {
+            var yzr = db.TBLYAZAR.Find(p.ID);
+            yzr.AD = p.AD;
+            yzr.SOYAD = p.SOYAD;
+            yzr.DETAY = p.DETAY;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
