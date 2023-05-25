@@ -6,11 +6,24 @@
 }
 
 <h2>Kitap Sayfası</h2>
-<div style="margin-bottom:15px; margin-top:15px;">
-    <input type="text" class="form-control" placeholder="Aranacak kitabı giriniz..." />
+<style>
+    b{
+        font-family: Calibri;
+        font-size:17px;
+    }
+    .text{
+        border-radius:50px;
+    }
+</style>
+@using (Html.BeginForm("Index", "Kitap", FormMethod.Get)) 
+{
+<div style="margin-bottom:15px; margin-top:30px;">
+    <b>Aranacak Kitap Adını Girin: &nbsp;</b>@Html.TextBox("p")
+    <input type="submit" value="Ara" class="btn btn-xs btn-default" />
 </div>
+}
 
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
     <tr>
         <th>ID</th>
         <th>Kitap Adı</th>
@@ -34,11 +47,9 @@
             <td>@k.YAYINEVI</td>
             <td>@k.SAYFA</td>
             <td>@k.DURUM</td>
-            <td><a href="/Kitap/KitapSil" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Kitap/KitapSil" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Kitap/KitapSil/@k.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Kitap/KitapGetir/@k.ID" class="btn btn-success">Güncelle</a></td>
         </tr>
     }
 </table>
 <a href="/Kitap/KitapEkle/" class="btn btn-primary">Yeni Kitap Ekle</a>
-
-
