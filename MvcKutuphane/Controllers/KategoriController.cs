@@ -38,7 +38,7 @@ namespace MvcKutuphane.Controllers
         public ActionResult KategoriGetir(int id)
         {
             var ktg = db.TBLKATEGORI.Find(id);
-            return View("KategoriGetir", ktg); //KategoriGetir sayfasını ktg değeri ile döndür o id değerine göre.
+            return View("KategoriGetir", ktg); //KategoriGetir sayfasını ktg değeri ile döndür o id'ye ait verilere göre.
         }
         public ActionResult KategoriGuncelle(TBLKATEGORI p)
         {
