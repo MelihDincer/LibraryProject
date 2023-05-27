@@ -1,4 +1,5 @@
 ﻿using MvcKutuphane.Models.Entity;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,9 @@ namespace MvcKutuphane.Controllers
     public class YazarController : Controller
     {
         DBKUTUPHANEEntities db = new DBKUTUPHANEEntities();
-        public ActionResult Index()
+        public ActionResult Index(int sayfa = 1)
         {
-            var degerler = db.TBLYAZAR.ToList();
+            var degerler = db.TBLYAZAR.ToList().ToPagedList(sayfa,3);
             return View(degerler);
         }
         [HttpGet]
