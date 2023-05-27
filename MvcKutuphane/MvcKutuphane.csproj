@@ -264,6 +264,7 @@
     <Content Include="Views\Personel\PersonelGetir.cshtml" />
     <Content Include="Views\Uye\Index.cshtml" />
     <Content Include="Views\Uye\UyeEkle.cshtml" />
+    <Content Include="Views\Uye\UyeGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
