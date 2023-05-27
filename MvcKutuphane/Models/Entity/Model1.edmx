@@ -131,7 +131,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TBLHAREKET_TBLPERSONEL">
+        <Association Name="FK_TBLHAREKET_TBLPERSONEL1">
           <End Role="TBLPERSONEL" Type="Self.TBLPERSONEL" Multiplicity="0..1" />
           <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="*" />
           <ReferentialConstraint>
@@ -201,7 +201,7 @@
             <End Role="TBLKITAP" EntitySet="TBLKITAP" />
             <End Role="TBLHAREKET" EntitySet="TBLHAREKET" />
           </AssociationSet>
-          <AssociationSet Name="FK_TBLHAREKET_TBLPERSONEL" Association="Self.FK_TBLHAREKET_TBLPERSONEL">
+          <AssociationSet Name="FK_TBLHAREKET_TBLPERSONEL1" Association="Self.FK_TBLHAREKET_TBLPERSONEL1">
             <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
             <End Role="TBLHAREKET" EntitySet="TBLHAREKET" />
           </AssociationSet>
