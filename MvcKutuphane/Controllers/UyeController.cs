@@ -23,7 +23,7 @@ namespace MvcKutuphane.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult PersonelEkle(TBLUYELER u)
+        public ActionResult UyeEkle(TBLUYELER u)
         {
             if (!(ModelState.IsValid))
             {
@@ -32,6 +32,32 @@ namespace MvcKutuphane.Controllers
             db.TBLUYELER.Add(u);
             db.SaveChanges();
             return View();
+        }
+        public ActionResult UyeSil(int id)
+        {
+            var uye = db.TBLUYELER.Find(id);
+            db.TBLUYELER.Remove(uye);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult UyeGetir(TBLUYELER u)
+        {
+            var uye = db.TBLUYELER.Find(u.ID);
+            return View("UyeGetir", uye);
+        }
+        public ActionResult UyeGuncelle(TBLUYELER u)
+        {
+            var uye = db.TBLUYELER.Find(u.ID);
+            uye.AD = u.AD;
+            uye.SOYAD = u.SOYAD;
+            uye.MAIL = u.MAIL;
+            uye.KULLANICIADI = u.KULLANICIADI;
+            uye.SIFRE = u.SIFRE;
+            uye.FOTOGRAF = u.FOTOGRAF;
+            uye.TELEFON = u.TELEFON;
+            uye.OKUL = u.OKUL;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
