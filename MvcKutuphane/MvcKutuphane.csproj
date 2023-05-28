@@ -135,11 +135,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\islemController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\KitapController.cs" />
     <Compile Include="Controllers\OduncController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
+    <Compile Include="Controllers\VitrinController.cs" />
     <Compile Include="Controllers\YazarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -208,6 +210,17 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="web\assets\favicon.ico" />
+    <Content Include="web\assets\img\avataaars.svg" />
+    <Content Include="web\assets\img\portfolio\cabin.png" />
+    <Content Include="web\assets\img\portfolio\cake.png" />
+    <Content Include="web\assets\img\portfolio\circus.png" />
+    <Content Include="web\assets\img\portfolio\game.png" />
+    <Content Include="web\assets\img\portfolio\safe.png" />
+    <Content Include="web\assets\img\portfolio\submarine.png" />
+    <Content Include="web\css\styles.css" />
+    <Content Include="web\index.html" />
+    <Content Include="web\js\scripts.js" />
     <EntityDeploy Include="Models\Entity\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -268,6 +281,9 @@
     <Content Include="Views\Uye\UyeGetir.cshtml" />
     <Content Include="Views\Odunc\OduncVer.cshtml" />
     <Content Include="Views\Odunc\Index.cshtml" />
+    <Content Include="Views\Odunc\Odunciade.cshtml" />
+    <Content Include="Views\islem\Index.cshtml" />
+    <Content Include="Views\Vitrin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
