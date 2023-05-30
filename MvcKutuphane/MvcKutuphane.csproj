@@ -212,6 +212,10 @@
     </Content>
     <Content Include="web\assets\favicon.ico" />
     <Content Include="web\assets\img\avataaars.svg" />
+    <Content Include="web\assets\img\biryilbasihikayesi.jpg" />
+    <Content Include="web\assets\img\doktoroxundeneyi.jpg" />
+    <Content Include="web\assets\img\kasagi.png" />
+    <Content Include="web\assets\img\library.png" />
     <Content Include="web\assets\img\portfolio\cabin.png" />
     <Content Include="web\assets\img\portfolio\cake.png" />
     <Content Include="web\assets\img\portfolio\circus.png" />
