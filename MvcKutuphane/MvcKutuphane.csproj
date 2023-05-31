@@ -136,6 +136,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\islemController.cs" />
+    <Compile Include="Controllers\istatistikController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\KitapController.cs" />
     <Compile Include="Controllers\OduncController.cs" />
@@ -167,7 +168,13 @@
     <Compile Include="Models\Entity\TBLCEZALAR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TBLHAKKIMIZDA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\TBLHAREKET.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\TBLILETISIM.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TBLKASA.cs">
@@ -188,6 +195,7 @@
     <Compile Include="Models\Entity\TBLYAZAR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Siniflarim\Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +218,53 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="web2\css\bootstrap.css" />
+    <Content Include="web2\css\clndr.css" />
+    <Content Include="web2\css\jqvmap.css" />
+    <Content Include="web2\css\nav.css" />
+    <Content Include="web2\css\style.css" />
+    <Content Include="web2\images\ar2.png" />
+    <Content Include="web2\images\arrows.png" />
+    <Content Include="web2\images\avatar.jpg" />
+    <Content Include="web2\images\avatar1.jpg" />
+    <Content Include="web2\images\avatar2.jpg" />
+    <Content Include="web2\images\img-sprite.png" />
+    <Content Include="web2\images\into.png" />
+    <Content Include="web2\images\into1.png" />
+    <Content Include="web2\images\logo.png" />
+    <Content Include="web2\images\pp.jpg" />
+    <Content Include="web2\images\pp0.jpg" />
+    <Content Include="web2\images\pp01.jpg" />
+    <Content Include="web2\images\settings.png" />
+    <Content Include="web2\images\tick-mark.png" />
+    <Content Include="web2\index.html" />
+    <Content Include="web2\js\Chart1.js" />
+    <Content Include="web2\js\clndr.js" />
+    <Content Include="web2\js\easyResponsiveTabs.js" />
+    <Content Include="web2\js\jquery.easydropdown.js" />
+    <Content Include="web2\js\jquery.min.js" />
+    <Content Include="web2\js\jquery.nicescroll.js" />
+    <Content Include="web2\js\jquery.vmap.js" />
+    <Content Include="web2\js\jquery.vmap.sampledata.js" />
+    <Content Include="web2\js\jquery.vmap.world.js" />
+    <Content Include="web2\js\main.js" />
+    <Content Include="web2\js\moment-2.2.1.js" />
+    <Content Include="web2\js\site.js" />
+    <Content Include="web2\js\underscore-min.js" />
+    <Content Include="web2\resimler\book1.jpg" />
+    <Content Include="web2\resimler\book2.jpg" />
+    <Content Include="web2\resimler\book3.jpg" />
+    <Content Include="web2\resimler\book4.jpg" />
+    <Content Include="web2\resimler\book5.jpg" />
+    <Content Include="web2\resimler\img1.jpg" />
+    <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="webhava\css\style.css" />
+    <Content Include="webhava\images\bg.jpg" />
+    <Content Include="webhava\images\img1.jpg" />
+    <Content Include="webhava\index.html" />
+    <Content Include="webhava\js\jquery-2.1.4.min.js" />
+    <Content Include="webhava\js\skycons.js" />
+    <Content Include="webhava\w3layouts-License.txt" />
     <Content Include="web\assets\favicon.ico" />
     <Content Include="web\assets\img\avataaars.svg" />
     <Content Include="web\assets\img\biryilbasihikayesi.jpg" />
@@ -288,6 +343,9 @@
     <Content Include="Views\Odunc\Odunciade.cshtml" />
     <Content Include="Views\islem\Index.cshtml" />
     <Content Include="Views\Vitrin\Index.cshtml" />
+    <Content Include="Views\istatistik\Index.cshtml" />
+    <Content Include="Views\istatistik\Hava.cshtml" />
+    <Content Include="Views\istatistik\HavaKart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
