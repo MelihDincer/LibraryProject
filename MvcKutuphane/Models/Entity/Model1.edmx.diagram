@@ -20,6 +20,8 @@
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLKITAP_TBLKATEGORI" ManuallyRouted="false" />
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLKITAP_TBLYAZAR" ManuallyRouted="false" />
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLHAREKET_TBLPERSONEL" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLHAKKIMIZDA" Width="1.5" PointX="8.375" PointY="7.75" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLILETISIM" Width="1.5" PointX="0.75" PointY="9.75" />
       </Diagram>
       <Diagram DiagramId="88c966195d124cb0961f99b000302f48" Name="Diagram2" >
         <EntityTypeShape EntityType="DBKUTUPHANEModel.sysdiagrams" Width="1.5" PointX="0.625" PointY="0.75" />
