@@ -346,6 +346,7 @@
     <Content Include="Views\istatistik\Index.cshtml" />
     <Content Include="Views\istatistik\Hava.cshtml" />
     <Content Include="Views\istatistik\HavaKart.cshtml" />
+    <Content Include="Views\istatistik\Galeri.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
