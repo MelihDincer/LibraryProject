@@ -199,6 +199,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="EnAktifUye" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="EnFazlaKitapYazar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DBKUTUPHANEModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -465,6 +466,7 @@
           <EntitySet Name="TBLHAKKIMIZDA" EntityType="DBKUTUPHANEModel.TBLHAKKIMIZDA" />
           <EntitySet Name="TBLILETISIM" EntityType="DBKUTUPHANEModel.TBLILETISIM" />
           <FunctionImport Name="EnFazlaKitapYazar" ReturnType="Collection(String)" />
+          <FunctionImport Name="EnAktifUye" ReturnType="Collection(String)" />
         </EntityContainer>
         <Association Name="FK_TBLHAREKET_TBLPERSONEL">
           <End Type="DBKUTUPHANEModel.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
@@ -623,6 +625,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="EnFazlaKitapYazar" FunctionName="DBKUTUPHANEModel.Store.EnFazlaKitapYazar" />
+          <FunctionImportMapping FunctionImportName="EnAktifUye" FunctionName="DBKUTUPHANEModel.Store.EnAktifUye" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -43,5 +43,10 @@ namespace MvcKutuphane.Models.Entity
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("EnFazlaKitapYazar");
         }
+    
+        public virtual ObjectResult<string> EnAktifUye()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("EnAktifUye");
+        }
     }
 }
