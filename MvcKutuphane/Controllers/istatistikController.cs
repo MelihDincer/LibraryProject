@@ -52,19 +52,17 @@ namespace MvcKutuphane.Controllers
             var deger3 = db.TBLCEZALAR.Sum(x => x.PARA);
             var deger4 = db.TBLKITAP.Where(x => x.DURUM == false).Count();
             var deger5 = db.TBLKATEGORI.Count();
-            var deger11 = db.TBLILETISIM.Count();
-            var deger7 = db.TBLUYELER.Count();
-            var deger8 = db.TBLUYELER.Count();
+            var deger8 = db.EnFazlaKitapYazar().FirstOrDefault();           
+            var deger11 = db.TBLILETISIM.Count();            
             var deger9 = db.TBLUYELER.Count();
+
             ViewBag.dgr1 = deger1;
             ViewBag.dgr2 = deger2;
             ViewBag.dgr3 = deger3;
             ViewBag.dgr4 = deger4;
             ViewBag.dgr5 = deger5;
-            ViewBag.dgr11 = deger11;
-            ViewBag.dgr7 = deger7;
             ViewBag.dgr8 = deger8;
-            ViewBag.dgr9 = deger9;
+            ViewBag.dgr11 = deger11;
             return View();
         }
     }
