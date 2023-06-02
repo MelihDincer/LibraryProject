@@ -56,6 +56,7 @@ namespace MvcKutuphane.Controllers
             var deger7 = db.EnCokOkunanKitap().FirstOrDefault();
             var deger8 = db.EnFazlaKitapYazar().FirstOrDefault();
             var deger9 = db.TBLKITAP.GroupBy(x => x.YAYINEVI).OrderByDescending(z => z.Count()).Select(y => new { y.Key }).FirstOrDefault();
+            var deger10 = db.EnBasariliPersonel().FirstOrDefault();
             var deger11 = db.TBLILETISIM.Count();
             var deger12 = db.TBLHAREKET.Where(x => x.ALISTARIH == DateTime.Today).Count();
 
@@ -68,7 +69,7 @@ namespace MvcKutuphane.Controllers
             ViewBag.dgr7 = deger7;
             ViewBag.dgr8 = deger8;
             ViewBag.dgr9 = deger9;
-            //ViewBag.dgr10 = deger10;
+            ViewBag.dgr10 = deger10;
             ViewBag.dgr11 = deger11;
             ViewBag.dgr12 = deger12;
             return View();
