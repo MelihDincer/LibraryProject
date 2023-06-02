@@ -21,10 +21,10 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UYE" Type="int" />
+          <Property Name="HAREKET" Type="int" />
           <Property Name="BASLANGIC" Type="smalldatetime" />
           <Property Name="BITIS" Type="smalldatetime" />
           <Property Name="PARA" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="HAREKET" Type="int" />
         </EntityType>
         <EntityType Name="TBLHAKKIMIZDA">
           <Key>
@@ -199,6 +199,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="EnFazlaKitapYazar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DBKUTUPHANEModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLCEZALAR" EntityType="Self.TBLCEZALAR" Schema="dbo" store:Type="Tables" />
@@ -463,6 +464,7 @@
           </AssociationSet>
           <EntitySet Name="TBLHAKKIMIZDA" EntityType="DBKUTUPHANEModel.TBLHAKKIMIZDA" />
           <EntitySet Name="TBLILETISIM" EntityType="DBKUTUPHANEModel.TBLILETISIM" />
+          <FunctionImport Name="EnFazlaKitapYazar" ReturnType="Collection(String)" />
         </EntityContainer>
         <Association Name="FK_TBLHAREKET_TBLPERSONEL">
           <End Type="DBKUTUPHANEModel.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
@@ -620,6 +622,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="EnFazlaKitapYazar" FunctionName="DBKUTUPHANEModel.Store.EnFazlaKitapYazar" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
