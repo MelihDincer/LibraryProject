@@ -52,9 +52,10 @@ namespace MvcKutuphane.Controllers
             var deger3 = db.TBLCEZALAR.Sum(x => x.PARA);
             var deger4 = db.TBLKITAP.Where(x => x.DURUM == false).Count();
             var deger5 = db.TBLKATEGORI.Count();
-            var deger8 = db.EnFazlaKitapYazar().FirstOrDefault();           
-            var deger11 = db.TBLILETISIM.Count();            
-            var deger9 = db.TBLUYELER.Count();
+            var deger8 = db.EnFazlaKitapYazar().FirstOrDefault();
+            var deger9 = db.TBLKITAP.GroupBy(x => x.YAYINEVI).OrderByDescending(z => z.Count()).Select(y => new { y.Key }).FirstOrDefault();
+            var deger11 = db.TBLILETISIM.Count();
+            var deger12 = db.TBLHAREKET.Where(x => x.ALISTARIH == DateTime.Today).Count();
 
             ViewBag.dgr1 = deger1;
             ViewBag.dgr2 = deger2;
@@ -62,7 +63,9 @@ namespace MvcKutuphane.Controllers
             ViewBag.dgr4 = deger4;
             ViewBag.dgr5 = deger5;
             ViewBag.dgr8 = deger8;
+            ViewBag.dgr9 = deger9;
             ViewBag.dgr11 = deger11;
+            ViewBag.dgr12 = deger12;
             return View();
         }
     }
