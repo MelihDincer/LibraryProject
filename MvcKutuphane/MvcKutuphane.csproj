@@ -142,6 +142,7 @@
     <Compile Include="Controllers\KitapController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OduncController.cs" />
+    <Compile Include="Controllers\PanelimController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
     <Compile Include="Controllers\VitrinController.cs" />
@@ -505,6 +506,8 @@
     <Content Include="weblogin\webfonts\fa-solid-900.woff2" />
     <Content Include="Views\Login\GirisYap.cshtml" />
     <Content Include="Views\KayitOl\Kayit.cshtml" />
+    <Content Include="Views\Shared\_LayoutPanel.cshtml" />
+    <Content Include="Views\Panelim\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
