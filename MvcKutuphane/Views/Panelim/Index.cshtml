@@ -5,4 +5,36 @@
 }
 
 <h2>Burası panel sayfam</h2>
-
+<table class="table table-hover">
+    <tr>
+        <td>
+            <label style="font-weight:bold">Mail Adresi: </label>  @HttpContext.Current.User.Identity.Name
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bold">Ad:</label> @Session["Ad"].ToString()
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bold">Soyad:</label> @Session["Soyad"].ToString()
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bold">Kullanıcı Adı:</label>  @Session["KullanıcıAdı"].ToString()
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bold">Şifre:</label>  @Session["Sifre"].ToString()
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="font-weight:bold">Okul:</label>  @Session["Okul"].ToString()
+        </td>
+    </tr>
+</table>
+<button class="btn btn-warning">Şifre Güncelle</button>
