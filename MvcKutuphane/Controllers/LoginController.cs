@@ -22,12 +22,13 @@ namespace MvcKutuphane.Controllers
             if (bilgiler!=null)
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.MAIL, false);
-                Session["id"] = bilgiler.ID.ToString();
-                Session["Ad"] = bilgiler.AD.ToString();
-                Session["Soyad"] = bilgiler.SOYAD.ToString();
-                Session["KullanıcıAdı"] = bilgiler.KULLANICIADI.ToString();
-                Session["Sifre"] = bilgiler.SIFRE.ToString();
-                Session["Okul"] = bilgiler.OKUL.ToString();
+                Session["Mail"] = bilgiler.MAIL.ToString();
+                TempData["id"] = bilgiler.ID.ToString();
+                TempData["Ad"] = bilgiler.AD.ToString();
+                TempData["Soyad"] = bilgiler.SOYAD.ToString();
+                TempData["KullanıcıAdı"] = bilgiler.KULLANICIADI.ToString();
+                TempData["Sifre"] = bilgiler.SIFRE.ToString();
+                TempData["Okul"] = bilgiler.OKUL.ToString();
                 return RedirectToAction("Index", "Panelim");
             }
             else

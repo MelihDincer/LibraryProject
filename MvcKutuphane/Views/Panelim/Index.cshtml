@@ -8,7 +8,7 @@
 <table class="table table-hover" style="margin-top:30px">
     <tr>
         <td>
-            <label style="font-weight:bold">Öğrenci ID: </label>  @Session["id"].ToString()
+            <label style="font-weight:bold">Öğrenci ID: </label>  @TempData["id"].ToString()
         </td>
     </tr>
     <tr>
@@ -18,27 +18,27 @@
     </tr>
     <tr>
         <td>
-            <label style="font-weight:bold">Ad:</label> @Session["Ad"].ToString()
+            <label style="font-weight:bold">Ad:</label> @TempData["Ad"].ToString()
         </td>
     </tr>
     <tr>
         <td>
-            <label style="font-weight:bold">Soyad:</label> @Session["Soyad"].ToString()
+            <label style="font-weight:bold">Soyad:</label> @TempData["Soyad"].ToString()
         </td>
     </tr>
     <tr>
         <td>
-            <label style="font-weight:bold">Kullanıcı Adı:</label>  @Session["KullanıcıAdı"].ToString()
+            <label style="font-weight:bold">Kullanıcı Adı:</label>  @TempData["KullanıcıAdı"].ToString()
         </td>
     </tr>
     <tr>
         <td>
-            <label style="font-weight:bold">Şifre:</label> <input type="text" class="form-control" value="@Session["Sifre"].ToString()" />
+            <label style="font-weight:bold">Şifre:</label> <input type="text" class="form-control" value="@TempData["Sifre"].ToString()" />
         </td>
     </tr>
     <tr>
         <td>
-            <label style="font-weight:bold">Okul:</label>  @Session["Okul"].ToString()
+            <label style="font-weight:bold">Okul:</label>  @TempData["Okul"].ToString()
         </td>
     </tr>
 </table>
