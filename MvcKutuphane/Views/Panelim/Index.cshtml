@@ -5,7 +5,12 @@
 }
 
 <h2>Burası panel sayfam</h2>
-<table class="table table-hover">
+<table class="table table-hover" style="margin-top:30px">
+    <tr>
+        <td>
+            <label style="font-weight:bold">Öğrenci ID: </label>  @Session["id"].ToString()
+        </td>
+    </tr>
     <tr>
         <td>
             <label style="font-weight:bold">Mail Adresi: </label>  @HttpContext.Current.User.Identity.Name
@@ -28,7 +33,7 @@
     </tr>
     <tr>
         <td>
-            <label style="font-weight:bold">Şifre:</label>  @Session["Sifre"].ToString()
+            <label style="font-weight:bold">Şifre:</label> <input type="text" class="form-control" value="@Session["Sifre"].ToString()" />
         </td>
     </tr>
     <tr>

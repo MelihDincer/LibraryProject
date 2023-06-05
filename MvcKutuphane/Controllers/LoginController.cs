@@ -22,6 +22,7 @@ namespace MvcKutuphane.Controllers
             if (bilgiler!=null)
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.MAIL, false);
+                Session["id"] = bilgiler.ID.ToString();
                 Session["Ad"] = bilgiler.AD.ToString();
                 Session["Soyad"] = bilgiler.SOYAD.ToString();
                 Session["KullanıcıAdı"] = bilgiler.KULLANICIADI.ToString();
