@@ -1,4 +1,4 @@
-﻿
+﻿@model MvcKutuphane.Models.Entity.TBLUYELER
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPanel.cshtml";
@@ -6,14 +6,9 @@
 
 <h2>Kütüphane Üye Profil Bilgileri</h2>
 
-@using (Html.BeginForm("Index", "Panelim", FormMethod.Post))
+@using (Html.BeginForm("Index2", "Panelim", FormMethod.Post))
 {
     <table class="table table-hover" style="margin-top:30px">
-        <tr>
-            <td>
-                <label style="font-weight:bold">Öğrenci ID: </label>  @TempData["id"].ToString()
-            </td>
-        </tr>
         <tr>
             <td>
                 <label style="font-weight:bold">Mail Adresi: </label>  @HttpContext.Current.User.Identity.Name
@@ -21,29 +16,38 @@
         </tr>
         <tr>
             <td>
-                <label style="font-weight:bold">Ad:</label> @TempData["Ad"].ToString()
+                @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
             </td>
         </tr>
         <tr>
             <td>
-                <label style="font-weight:bold">Soyad:</label> @TempData["Soyad"].ToString()
+                @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control" })
             </td>
         </tr>
         <tr>
             <td>
-                <label style="font-weight:bold">Kullanıcı Adı:</label>  @TempData["KullanıcıAdı"].ToString()
+                @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control" })
             </td>
         </tr>
         <tr>
             <td>
-                <label style="font-weight:bold">Şifre:</label> <input type="text" class="form-control" value="@TempData["Sifre"].ToString()" name="SIFRE" />
+                @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control" })
             </td>
         </tr>
         <tr>
             <td>
-                <label style="font-weight:bold">Okul:</label>  @TempData["Okul"].ToString()
+                @Html.TextBoxFor(x => x.FOTOGRAF, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.TextBoxFor(x => x.OKUL, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="btn btn-warning">Şifre Güncelle</button>
             </td>
         </tr>
     </table>
 }
-<button class="btn btn-warning">Şifre Güncelle</button>
