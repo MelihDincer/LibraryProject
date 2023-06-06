@@ -24,6 +24,11 @@ namespace MvcKutuphane.Controllers
             var kullanici = (string)Session["Mail"];
             var uye = db.TBLUYELER.FirstOrDefault(x => x.MAIL == kullanici);
             uye.SIFRE = p.SIFRE;
+            uye.AD = p.AD;
+            uye.SOYAD = p.SOYAD;
+            uye.FOTOGRAF = p.FOTOGRAF;
+            uye.OKUL = p.OKUL;
+            uye.KULLANICIADI = p.KULLANICIADI;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
