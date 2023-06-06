@@ -14,16 +14,18 @@ namespace MvcKutuphane.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            return View();
+            var uyemail = (string)Session["Mail"];
+            var degerler = db.TBLUYELER.FirstOrDefault(z => z.MAIL == uyemail);
+            return View(degerler);
         }
         [HttpPost]
-        public ActionResult Index(TBLUYELER p) 
+        public ActionResult Index2(TBLUYELER p) 
         {
             var kullanici = (string)Session["Mail"];
             var uye = db.TBLUYELER.FirstOrDefault(x => x.MAIL == kullanici);
             uye.SIFRE = p.SIFRE;
             db.SaveChanges();
-            return View(); 
+            return RedirectToAction("Index");
         }
     }
 }
