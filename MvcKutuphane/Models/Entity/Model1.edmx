@@ -93,7 +93,7 @@
           <Property Name="GONDEREN" Type="varchar" MaxLength="50" />
           <Property Name="ALICI" Type="varchar" MaxLength="50" />
           <Property Name="KONU" Type="varchar" MaxLength="50" />
-          <Property Name="ICERIK" Type="varchar" MaxLength="50" />
+          <Property Name="ICERIK" Type="varchar" MaxLength="500" />
           <Property Name="TARIH" Type="smalldatetime" />
         </EntityType>
         <EntityType Name="TBLPERSONEL">
@@ -522,7 +522,7 @@
           <Property Name="GONDEREN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ALICI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ICERIK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ICERIK" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="TARIH" Type="DateTime" Precision="0" />
         </EntityType>
       </Schema>
