@@ -190,6 +190,9 @@
     <Compile Include="Models\Entity\TBLKITAP.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TBLMESAJLAR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\TBLPERSONEL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
