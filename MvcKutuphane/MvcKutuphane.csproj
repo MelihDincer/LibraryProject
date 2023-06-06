@@ -141,6 +141,7 @@
     <Compile Include="Controllers\KayitOlController.cs" />
     <Compile Include="Controllers\KitapController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MesajlarController.cs" />
     <Compile Include="Controllers\OduncController.cs" />
     <Compile Include="Controllers\PanelimController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
@@ -508,6 +509,8 @@
     <Content Include="Views\KayitOl\Kayit.cshtml" />
     <Content Include="Views\Shared\_LayoutPanel.cshtml" />
     <Content Include="Views\Panelim\Index.cshtml" />
+    <Content Include="Views\Mesajlar\Index.cshtml" />
+    <Content Include="Views\Mesajlar\YeniMesaj.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
