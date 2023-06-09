@@ -70,6 +70,7 @@
           </Key>
           <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AD" Type="varchar" MaxLength="20" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <EntityType Name="TBLKITAP">
           <Key>
@@ -315,6 +316,7 @@
           <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBLKITAP" Relationship="Self.FK_TBLKITAP_TBLKATEGORI" FromRole="TBLKATEGORI" ToRole="TBLKITAP" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBLKITAP">
           <Key>
@@ -580,6 +582,7 @@
           <EntitySetMapping Name="TBLKATEGORI">
             <EntityTypeMapping TypeName="DBKUTUPHANEModel.TBLKATEGORI">
               <MappingFragment StoreEntitySet="TBLKATEGORI">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />
               </MappingFragment>
