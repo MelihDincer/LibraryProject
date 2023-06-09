@@ -514,6 +514,8 @@
     <Content Include="Views\Panelim\Index.cshtml" />
     <Content Include="Views\Mesajlar\Index.cshtml" />
     <Content Include="Views\Mesajlar\YeniMesaj.cshtml" />
+    <Content Include="Views\Mesajlar\Giden.cshtml" />
+    <Content Include="Views\Panelim\Kitaplarim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
