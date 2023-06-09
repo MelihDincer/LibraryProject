@@ -10,28 +10,29 @@ namespace MvcKutuphane.Controllers
     public class KategoriController : Controller
     {
         DBKUTUPHANEEntities db = new DBKUTUPHANEEntities();
-        
+
         public ActionResult Index()
         {
-            var degerler = db.TBLKATEGORI.ToList();
+            var degerler = db.TBLKATEGORI.Where(x => x.DURUM == true).ToList();
             return View(degerler);
         }
         [HttpGet]
-        public ActionResult KategoriEkle() 
-        { 
-            return View(); 
-        }   
+        public ActionResult KategoriEkle()
+        {
+            return View();
+        }
         [HttpPost]
-        public ActionResult KategoriEkle(TBLKATEGORI p) 
-        { 
+        public ActionResult KategoriEkle(TBLKATEGORI p)
+        {
             db.TBLKATEGORI.Add(p);
             db.SaveChanges();
-            return RedirectToAction("Index"); 
+            return RedirectToAction("Index");
         }
         public ActionResult KategoriSil(int id)
         {
             var kategori = db.TBLKATEGORI.Find(id);
-            db.TBLKATEGORI.Remove(kategori); 
+            //db.TBLKATEGORI.Remove(kategori);
+            kategori.DURUM = false;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
