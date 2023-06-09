@@ -17,9 +17,21 @@ namespace MvcKutuphane.Controllers
             var mesajlar = db.TBLMESAJLAR.Where(x => x.ALICI == kullanici).ToList();
             return View(mesajlar);
         }
+       
+        [HttpGet]
         public ActionResult YeniMesaj()
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult YeniMesaj(TBLMESAJLAR t)
+        {
+            t.GONDEREN = (string)Session["Mail"];
+            t.TARIH = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            db.TBLMESAJLAR.Add(t);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+       
     }
 }
