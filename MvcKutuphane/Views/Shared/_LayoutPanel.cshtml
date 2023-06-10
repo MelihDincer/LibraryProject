@@ -14,22 +14,33 @@
     <link href="~/webpanel/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="~/webpanel/css/simple-sidebar.css" rel="stylesheet">
+    <style>
+        #ogr{
+            background-color:darkslategrey;
+            font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+            color:antiquewhite;
+        }
+        h4{
+            padding-left:17px;
+            font-weight:bold;
+        }
+    </style>
 </head>
 <body>
     <div class="d-flex" id="wrapper">
 
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Ad Soyad </div>
+            <div class="sidebar-heading" id="ogr"><h4>Öğrenci Paneli</h4></div>
             <div class="list-group list-group-flush">
                 <a href="/Panelim/Index/" class="list-group-item list-group-item-action bg-light">Profilim</a>
                 <a href="/Mesajlar/Index/" class="list-group-item list-group-item-action bg-light">Gelen Mesajlar</a>
                 <a href="/Mesajlar/Giden/" class="list-group-item list-group-item-action bg-light">Gönderilen Mesajlar</a>
                 <a href="/Mesajlar/YeniMesaj/" class="list-group-item list-group-item-action bg-light">Yeni Mesaj</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Duyurular</a>
+                <a href="/Panelim/Duyurular/" class="list-group-item list-group-item-action bg-light">Duyurular</a>
                 <a href="/Panelim/Kitaplarim/" class="list-group-item list-group-item-action bg-light">Kitaplarım</a>
                 <a href="/Vitrin/Index/" class="list-group-item list-group-item-action bg-light">Vitrin</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Yardım</a>
+                <a href="/Panelim/LogOut/" class="list-group-item list-group-item-action bg-light">Çıkış Yap</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -54,7 +65,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/Panelim/Index">Hesabım</a>
-                                <a class="dropdown-item" href="#">Çıkış Yap</a>
+                                <a class="dropdown-item" href="/Panelim/LogOut/">Çıkış Yap</a>
                                 <div class="dropdown-divider"></div>
                             </div>
                         </li>
