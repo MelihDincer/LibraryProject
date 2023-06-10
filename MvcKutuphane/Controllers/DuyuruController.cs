@@ -40,6 +40,14 @@ namespace MvcKutuphane.Controllers
             var duyuru = db.TBLDUYURULAR.Find(id);
             return View("DuyuruDetay", duyuru);
         }
-       
+        public ActionResult DuyuruGuncelle(TBLDUYURULAR dyr)
+        {
+            var duyuru = db.TBLDUYURULAR.Find(dyr.ID);
+            duyuru.KATEGORI = dyr.KATEGORI;
+            duyuru.ICERIK = dyr.ICERIK;
+            duyuru.TARIH = dyr.TARIH;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
