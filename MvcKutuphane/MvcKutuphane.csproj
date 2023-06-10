@@ -525,6 +525,7 @@
     <Content Include="Views\Duyuru\Index.cshtml" />
     <Content Include="Views\Duyuru\YeniDuyuru.cshtml" />
     <Content Include="Views\Duyuru\DuyuruDetay.cshtml" />
+    <Content Include="Views\Panelim\Duyurular.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
