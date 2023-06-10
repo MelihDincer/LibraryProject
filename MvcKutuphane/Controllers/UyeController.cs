@@ -59,5 +59,12 @@ namespace MvcKutuphane.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        //Üyenin Kitap Geçmişini Görüntüleme
+        public ActionResult UyeKitapGecmis(int id)
+        {
+            var uyektp = db.TBLHAREKET.Where(x => x.UYE == id).ToList();
+            ViewBag.uyead = db.TBLUYELER.Where(x => x.ID == id).Select(z => z.AD + " " + z.SOYAD).FirstOrDefault();
+            return View(uyektp);
+        }
     }
 }
