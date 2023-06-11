@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Security;
 namespace MvcKutuphane.Controllers
 {
+    [AllowAnonymous] //Muaf tutulacak sayfayı belirleyen bir özelliktir. Bu kullanılmasaydı Global.asax dosyasında
     public class LoginController : Controller
     {
         DBKUTUPHANEEntities db = new DBKUTUPHANEEntities();
