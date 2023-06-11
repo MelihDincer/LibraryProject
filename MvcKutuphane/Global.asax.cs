@@ -12,6 +12,7 @@ namespace MvcKutuphane
     {
         protected void Application_Start()
         {
+            GlobalFilters.Filters.Add(new AuthorizeAttribute()); //Bu kod ile tüm sayfalara erişimi engellemiş olduk. AllowAnonymaus attr. kullanacağımız sayfalarda da bu sayfaların muaf olmasını sağlayabiliriz. Örnek kullanım: LoginController
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
