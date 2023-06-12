@@ -2615,6 +2615,8 @@
     <Content Include="Views\Duyuru\YeniDuyuru.cshtml" />
     <Content Include="Views\Duyuru\DuyuruDetay.cshtml" />
     <Content Include="Views\Panelim\Duyurular.cshtml" />
+    <Content Include="Views\Panelim\Partial1.cshtml" />
+    <Content Include="Views\Panelim\Partial2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
