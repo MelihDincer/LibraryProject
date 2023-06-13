@@ -1,4 +1,5 @@
-﻿using MvcKutuphane.Models.Entity;
+﻿using Microsoft.Ajax.Utilities;
+using MvcKutuphane.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +39,14 @@ namespace MvcKutuphane.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-       
+       public PartialViewResult Partial1()
+        {
+            var kullanici = (string)Session["Mail"];
+            var gidensayisi = db.TBLMESAJLAR.Where(x=>x.GONDEREN == kullanici).Count();
+            ViewBag.d1 = gidensayisi;
+            var gelensayisi = db.TBLMESAJLAR.Where(x=>x.ALICI ==  kullanici).Count();
+            ViewBag.d2 = gelensayisi;
+            return PartialView();
+        }
     }
 }
