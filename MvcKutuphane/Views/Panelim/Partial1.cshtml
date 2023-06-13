@@ -8,30 +8,30 @@
 
     if (x.KATEGORI == "Diğer")
     {
-        renk = "bg-dark text-white";
+        renk = "background-color:slategray; color:white";
     }
     if (x.KATEGORI == "Yeni Kitap")
     {
-        renk = "bg-success text-white";
+        renk = "background-color:lightcoral; color:darkslategray";
     }
     if (x.KATEGORI == "İletişim")
     {
-        renk = "bg-info text-white";
+        renk = "background-color:lightgoldenrodyellow; color:darkslategray";
     }
     if (x.KATEGORI == "Kitapları Geciktirmeyin")
     {
-        renk = "bg-danger text-white";
+        renk = "background-color:lightblue; color:darkslategray";
     }
     <div class="post">
-            <div class="user-block">
+            <div class="user-block" style="@renk">
                 <img class="img-circle img-bordered-sm" src="~/AdminLTE-3.0.4/dist/img/2.png" alt="user image">
                 <span class="username">
-                    <a href="#" class="@renk">@x.KATEGORI</a>
-                    <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
+                    <a href="#" style="@renk">@x.KATEGORI</a>
+                    <a href="#" style="@renk" class="float-right btn-tool"><i class="fas fa-times"></i></a>
                 </span>
-                <span class="description @renk">@x.TARIH</span>
+                <span style="@renk" class="description" >@x.TARIH</span>
             </div>
             <!-- /.user-block -->
-            <p class="@renk">@x.ICERIK</p>
+            <p style="@renk">@x.ICERIK</p>
     </div>
 }
