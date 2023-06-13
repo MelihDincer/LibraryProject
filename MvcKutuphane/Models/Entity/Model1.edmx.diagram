@@ -24,6 +24,7 @@
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLILETISIM" Width="1.5" PointX="10" PointY="5.5" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLMESAJLAR" Width="1.5" PointX="1.125" PointY="9" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLDUYURULAR" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLADMIN" Width="1.5" PointX="3.375" PointY="8.875" />
       </Diagram>
       <Diagram DiagramId="88c966195d124cb0961f99b000302f48" Name="Diagram2" >
         <EntityTypeShape EntityType="DBKUTUPHANEModel.sysdiagrams" Width="1.5" PointX="0.625" PointY="0.75" />
