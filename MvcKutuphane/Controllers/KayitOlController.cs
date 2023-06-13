@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace MvcKutuphane.Controllers
 {
+    [AllowAnonymous]
     public class KayitOlController : Controller
     {
         DBKUTUPHANEEntities db = new DBKUTUPHANEEntities();
