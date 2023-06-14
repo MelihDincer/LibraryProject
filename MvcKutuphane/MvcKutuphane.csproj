@@ -135,7 +135,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="Controllers\AyarlarController.cs" />
     <Compile Include="Controllers\DuyuruController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\GrafikController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\islemController.cs" />
     <Compile Include="Controllers\istatistikController.cs" />
@@ -153,6 +156,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\Entity\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2181,6 +2185,14 @@
     <Content Include="web3\validation.html" />
     <Content Include="web3\w3layouts-License.txt" />
     <Content Include="web3\Yeni Metin Belgesi.txt" />
+    <Content Include="weberror\css\font-awesome.min.css" />
+    <Content Include="weberror\css\popuo-box.css" />
+    <Content Include="weberror\css\style.css" />
+    <Content Include="weberror\images\b8.jpg" />
+    <Content Include="weberror\index.html" />
+    <Content Include="weberror\js\jquery-2.2.3.min.js" />
+    <Content Include="weberror\js\jquery.magnific-popup.js" />
+    <Content Include="weberror\w3layouts-License.txt" />
     <Content Include="webhava\css\style.css" />
     <Content Include="webhava\images\bg.jpg" />
     <Content Include="webhava\images\img1.jpg" />
@@ -2623,6 +2635,15 @@
     <Content Include="Views\Panelim\Partial2.cshtml" />
     <Content Include="Views\Mesajlar\Partial1.cshtml" />
     <Content Include="Views\AdminLogin\Login.cshtml" />
+    <Content Include="Views\Grafik\Index.cshtml" />
+    <Content Include="Views\Error\Page404.cshtml" />
+    <Content Include="weberror\fonts\fontawesome-webfont.eot" />
+    <Content Include="weberror\fonts\fontawesome-webfont.ttf" />
+    <Content Include="weberror\fonts\fontawesome-webfont.woff" />
+    <Content Include="weberror\fonts\fontawesome-webfont.woff2" />
+    <Content Include="weberror\fonts\FontAwesome.otf" />
+    <Content Include="Views\Ayarlar\Index.cshtml" />
+    <Content Include="Views\Ayarlar\AdminGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
