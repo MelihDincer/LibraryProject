@@ -69,12 +69,6 @@ namespace MvcKutuphane.Controllers
             var duyuruliste = db.TBLDUYURULAR.ToList();
             return View(duyuruliste);
         }
-        //Çıkış yapma işlemi
-        public ActionResult LogOut()
-        {
-            FormsAuthentication.SignOut();
-            return RedirectToAction("GirisYap", "Login");
-        }
         public PartialViewResult Partial1()
         {
             return PartialView();

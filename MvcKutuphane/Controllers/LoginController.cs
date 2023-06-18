@@ -31,5 +31,11 @@ namespace MvcKutuphane.Controllers
                 return View();
             }
         }
+        //Çıkış yapma işlemi
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("GirisYap", "Login");
+        }
     }
 }
