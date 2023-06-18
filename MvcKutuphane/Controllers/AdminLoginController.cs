@@ -24,13 +24,19 @@ namespace MvcKutuphane.Controllers
             if (bilgiler != null)
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.Kullanici, false);
-                Session["Kullanici"]=bilgiler.Kullanici.ToString();
+                Session["Kullanici"] = bilgiler.Kullanici.ToString();
                 return RedirectToAction("Index", "Kategori");
             }
             else
             {
                 return View();
-            }           
+            }
+        }
+        //Çıkış yapma işlemi
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login", "AdminLogin");
         }
     }
 }
