@@ -30,18 +30,18 @@
                                                 </span>
                                             </a>
                                             <--->
-                                                    <a class="btn btn-warning">
-                                                        <span class="bg-warning">
-                                                            @if (item.UYEGETIRTARIH == null)
-                                                            {
-                                                                <i>Henüz Teslim Edilmedi.</i>
-                                                            }
-                                                            @if (item.UYEGETIRTARIH != null)
-                                                            {
-                                                                @(((DateTime)item.UYEGETIRTARIH).ToString("dd-MMM-yyyy"))
-                                                            }
-                                                        </span>
-                                                    </a>
+                                                <a class="btn btn-warning">
+                                                    <span class="bg-warning">
+                                                        @if (item.UYEGETIRTARIH == null)
+                                                        {
+                                                            <i>Henüz Teslim Edilmedi.</i>
+                                                        }
+                                                        @if (item.UYEGETIRTARIH != null)
+                                                        {
+                                                            @(((DateTime)item.UYEGETIRTARIH).ToString("dd-MMM-yyyy"))
+                                                        }
+                                                    </span>
+                                                </a>
                                         </div>
                                         <!-- /.timeline-label -->
                                         <!-- timeline item -->
